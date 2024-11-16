@@ -1,0 +1,84 @@
+/* Stile generale per il contenitore */
+div {
+    max-width: 800px; /* Limita la larghezza per una leggibilità migliore */
+    margin: 2rem auto; /* Centra il contenuto */
+    padding: 1.5rem; /* Spaziatura interna */
+    background: #1e293b; /* Sfondo scuro per un look elegante */
+    color: #ffffff; /* Testo bianco per contrasto */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombra per profondità */
+    font-family: 'Roboto', sans-serif; /* Font moderno */
+    line-height: 1.6; /* Migliora la leggibilità */
+  }
+  
+  /* Stile per il messaggio di caricamento */
+  div[ngIf="loading"] {
+    text-align: center; /* Centra il testo */
+    font-size: 1.5rem; /* Testo più grande */
+    color: #ffd700; /* Colore dorato per evidenziare */
+    animation: pulse 1.5s infinite; /* Effetto animato */
+  }
+  
+  /* Animazione di caricamento */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Stile per il titolo */
+  div h1 {
+    text-align: center; /* Centra il titolo */
+    font-size: 2.5rem; /* Dimensione grande per il titolo */
+    color: #4ca1af; /* Colore sfumato accattivante */
+    margin-bottom: 1rem; /* Spaziatura sotto il titolo */
+  }
+  
+  /* Stile per l'immagine */
+  div img {
+    display: block; /* Rende l'immagine un elemento a blocco */
+    max-width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    margin: 1rem auto; /* Centra l'immagine */
+    border-radius: 8px; /* Angoli arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Effetto ombra */
+    border: 2px solid #4ca1af; /* Bordo per evidenziare */
+  }
+  
+  /* Stile per i paragrafi */
+  div p {
+    font-size: 1.2rem; /* Dimensione leggibile */
+    margin: 0.5rem 0; /* Spaziatura tra i paragrafi */
+  }
+  
+  /* Stile per i titoli dei paragrafi */
+  div p strong {
+    color: #ffd700; /* Colore dorato per evidenziare */
+    font-weight: bold; /* Grassetto */
+  }
+  
+  /* Effetto hover per i dati */
+  div:hover {
+    transform: translateY(-5px); /* Solleva leggermente il contenitore */
+    transition: all 0.3s ease; /* Transizione fluida */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Ombra più intensa */
+  }
+  
+  /* Responsività per dispositivi mobili */
+  @media (max-width: 768px) {
+    div {
+      padding: 1rem; /* Riduce la spaziatura interna */
+    }
+  
+    div h1 {
+      font-size: 2rem; /* Riduce la dimensione del titolo */
+    }
+  
+    div p {
+      font-size: 1rem; /* Testo più piccolo per schermi stretti */
+    }
+  }
+  

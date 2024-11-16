@@ -1,0 +1,81 @@
+/* Stile generale per il navigatore */
+nav {
+    background: linear-gradient(90deg, #2c3e50, #4ca1af); /* Sfondo sfumato moderno */
+    padding: 1rem 2rem; /* Spaziatura più ampia per un look premium */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Effetto ombra intenso */
+    border-radius: 8px; /* Angoli arrotondati */
+    margin: 1rem auto; /* Centra il menu */
+    max-width: 80%; /* Larghezza limitata per centratura migliore */
+  }
+  
+  /* Stile della lista non ordinata */
+  nav ul {
+    list-style: none; /* Rimuove i punti elenco */
+    display: flex; /* Disposizione orizzontale */
+    justify-content: space-around; /* Distribuzione uniforme degli elementi */
+    align-items: center; /* Centra verticalmente */
+    margin: 0; /* Rimuove margini */
+    padding: 0; /* Rimuove padding */
+  }
+  
+  /* Stile degli elementi della lista */
+  nav ul li {
+    position: relative; /* Necessario per effetti personalizzati */
+  }
+  
+  /* Stile dei link */
+  nav ul li a {
+    text-decoration: none; /* Rimuove sottolineatura */
+    color: #ffffff; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    font-size: 1.2rem; /* Dimensione del testo */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    letter-spacing: 0.1rem; /* Spaziatura tra le lettere */
+    padding: 0.5rem 1rem; /* Spaziatura interna */
+    transition: all 0.3s ease; /* Animazioni fluide */
+    border-radius: 5px; /* Leggero arrotondamento */
+  }
+  
+  /* Effetto hover sui link */
+  nav ul li a:hover {
+    color: #ffd700; /* Cambia colore in dorato */
+    background-color: rgba(255, 255, 255, 0.2); /* Sfondo trasparente al passaggio del mouse */
+    transform: scale(1.15); /* Ingrandisce leggermente */
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Aggiunge un'ombra dorata */
+  }
+  
+  /* Linea decorativa sotto i link (solo su hover) */
+  nav ul li a::after {
+    content: ''; /* Elemento vuoto per decorazione */
+    display: block;
+    height: 2px; /* Spessore della linea */
+    width: 0%; /* Larghezza iniziale */
+    background-color: #ffd700; /* Colore dorato */
+    transition: width 0.3s ease; /* Animazione della larghezza */
+    margin: 0 auto; /* Centratura */
+  }
+  
+  /* Estensione della linea decorativa */
+  nav ul li a:hover::after {
+    width: 100%; /* Linea si estende per tutta la lunghezza del link */
+  }
+  
+  /* Responsività per dispositivi mobili */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* Disposizione verticale */
+      align-items: flex-start; /* Allineamento a sinistra */
+      gap: 1rem; /* Spaziatura tra gli elementi */
+    }
+  
+    nav {
+      max-width: 95%; /* Adatta il menu alla larghezza dello schermo */
+      padding: 1.5rem; /* Maggiore spaziatura per clic facili */
+    }
+  
+    nav ul li a {
+      font-size: 1.5rem; /* Testo più grande per dispositivi mobili */
+      text-align: left; /* Allineamento del testo */
+    }
+  }
+  
