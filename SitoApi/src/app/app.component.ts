@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private router: Router) {}
 
-  searchCard(): void {
+  RCarte(): void {
     if (this.searchTerm) {
       this.router.navigate([`/card/${this.searchTerm}`]);
     }
