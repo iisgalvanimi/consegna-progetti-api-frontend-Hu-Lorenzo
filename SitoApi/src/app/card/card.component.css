@@ -1,4 +1,4 @@
-div {
+/*div {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -71,4 +71,34 @@ div:hover {
   div p {
       font-size: 1rem;
   }
+}*/
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffd700;
 }
+
+.set-grid, .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.set, .card {
+  text-align: center;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.set:hover, .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.set img, .card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+

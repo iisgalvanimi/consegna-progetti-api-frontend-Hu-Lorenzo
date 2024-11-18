@@ -1,4 +1,4 @@
-<div *ngIf="loading">Caricamento...</div>
+<!--<div *ngIf="loading">Caricamento...</div>
 <div *ngIf="!loading && cardData">
   <h1>{{ cardData.name }}</h1>
   <img [src]="cardData.image_uris?.normal" alt="{{ cardData.name }}">
@@ -7,3 +7,38 @@
   <p><strong>Set:</strong> {{ cardData.set_name }}</p>
   <p><strong>Prezzo:</strong> ${{ cardData.prices.usd }}</p>
 </div>
+-->
+<div *ngIf="loading" class="loading">Caricamento...</div>
+
+<!-- Visualizza i set -->
+<div *ngIf="view === 'sets'">
+  <h1>Set Disponibili</h1>
+  <div class="set-grid">
+    <div class="set" *ngFor="let set of sets" (click)="navigateToSet(set)">
+      <img [src]="set.icon_svg_uri" [alt]="set.name" />
+      <p>{{ set.name }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Visualizza le carte di un set -->
+<div *ngIf="view === 'cards'">
+  <h1>Carte del Set</h1>
+  <div class="card-grid">
+    <div class="card" *ngFor="let card of cards" (click)="navigateToCard(card)">
+      <img [src]="card.image_uris?.small" [alt]="card.name" />
+      <p>{{ card.name }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Visualizza i dettagli di una carta -->
+<div *ngIf="view === 'details' && cardData">
+  <h1>{{ cardData.name }}</h1>
+  <img [src]="cardData.image_uris?.normal" [alt]="cardData.name" />
+  <p><strong>Tipo:</strong> {{ cardData.type_line }}</p>
+  <p><strong>Testo:</strong> {{ cardData.oracle_text }}</p>
+  <p><strong>Set:</strong> {{ cardData.set_name }}</p>
+  <p><strong>Prezzo:</strong> ${{ cardData.prices?.usd }}</p>
+</div>
+
